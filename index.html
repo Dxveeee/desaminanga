@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selamat Datang - Desa Minanga</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="img/logomitra.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-top">
+        <div class="logo-section">
+          <div class="logo">
+            <img src="img/logomitra.png" alt="Logo Desa Minanga" />
+          </div>
+          <div class="logo-text">
+            <h1>Desa Minanga</h1>
+            <p>Kecamatan Pusomaen, Kabupaten Minahasa Tenggara</p>
+          </div>
+        </div>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+          <div class="nav-container">
+            <ul class="nav-menu" id="navMenu">
+              <li><a href="#" onclick="showPage('beranda')">Beranda</a></li>
+              <li><a href="#" onclick="showPage('profil')">Sejarah Desa</a></li>
+              <li>
+                <a href="#" onclick="showPage('potensi')">Potensi Desa</a>
+              </li>
+              <li>
+                <a href="#" onclick="showPage('struktur')"
+                  >Struktur Organisasi</a
+                >
+              </li>
+              <li><a href="#" onclick="showPage('apbdes')">APBDes</a></li>
+              <li><a href="#" onclick="showPage('kontak')">Kontak</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Beranda Page -->
+    <div id="beranda" class="page-content active">
+      <!-- Hero Section -->
+      <section class="hero">
+        <!-- Video Background -->
+        <video class="hero-video" autoplay loop muted playsinline>
+          <source src="vid/drone.mp4" type="video/mp4">
+          Browser Anda tidak mendukung video.
+        </video>
+        <div class="hero-content">
+          <h2>Selamat Datang di Website Desa Minanga</h2>
+        </div>
+      </section>
+
+      <!-- Sambutan Kepala Desa -->
+      <section class="sambutan">
+        <div class="sambutan-content">
+          <div class="sambutan-image">
+            <img
+              src="img/kumtua.png"
+              alt="Kepala Desa"
+            />
+            <h4>CONSTANTEIN A. RATULIU, SE</h4>
+            <p>Hukum Tua</p>
+          </div>
+          <div class="sambutan-text">
+            <h3>Sambutan Hukum Tua</h3>
+            <div class="quote">
+              <p>Salam sejahtera bagi kita semua,</p>
+              <p>
+                Selamat datang di website resmi Desa Minanga, Kecamatan
+                Pusomaen, Kabupaten Minahasa Tenggara.
+              </p>
+              <p>
+                Melalui platform digital ini, kami berkomitmen untuk memberikan
+                pelayanan yang transparan, akuntabel, dan mudah diakses oleh
+                seluruh masyarakat.
+              </p>
+              <p>
+                Desa Minanga memiliki potensi yang besar dalam berbagai aspek,
+                mulai dari sumber daya alam, budaya, hingga potensi ekonomi yang
+                dapat dikembangkan untuk kesejahteraan bersama.
+              </p>
+              <p>
+                Website ini dirancang sebagai sarana komunikasi dan informasi
+                antara pemerintah desa dengan masyarakat, serta menjadi jendela
+                bagi dunia luar untuk mengenal potensi dan keindahan desa kita.
+              </p>
+              <p>
+                Mari bersama-sama membangun desa yang lebih maju, sejahtera, dan
+                bermartabat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Jelajahi Desa -->
+      <div class="container">
+        <div class="section-title">
+          <h2>Jelajahi Desa</h2>
+          <p>Informasi Desa Minanga</p>
+        </div>
+
+        <div class="grid-cards">
+          <div class="card" onclick="showPage('profil')">
+            <div class="card-icon">
+              <i class="fas fa-landmark"></i>
+            </div>
+            <h3>Sejarah Desa</h3>
+            <p>Sejarah Desa, dan Sejarah Pemerintah</p>
+            <span class="card-button">Lihat</span>
+          </div>
+
+          <div class="card" onclick="showPage('potensi')">
+            <div class="card-icon">
+              <i class="fas fa-seedling"></i>
+            </div>
+            <h3>Potensi Desa</h3>
+            <p>Potensi ekonomi, pertanian, dan unggulan desa</p>
+            <span class="card-button">Lihat</span>
+          </div>
+
+          <div class="card" onclick="showPage('struktur')">
+            <div class="card-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Struktur Organisasi</h3>
+            <p>Pemerintahan dan perangkat desa</p>
+            <span class="card-button">Lihat</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Statistik Desa -->
+      <section class="stats">
+        <div class="container">
+          <div class="section-title" style="color: white">
+            <h2 style="color: white">Statistik Desa</h2>
+            <p style="color: rgba(255, 255, 255, 0.8)">
+              Data Kependudukan Desa Minanga
+            </p>
+          </div>
+
+          <!-- Baris 1: Jiwa, KK, Jaga -->
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number">623</div>
+              <div class="stat-label">Jiwa</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">224</div>
+              <div class="stat-label">Kepala Keluarga</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">4</div>
+              <div class="stat-label">Jaga</div>
+            </div>
+          </div>
+        
+          <!-- Baris 2: Laki-laki dan Perempuan -->
+          <div class="stats-grid-row2">
+            <div class="stat-item">
+              <div class="stat-number">339</div>
+              <div class="stat-label">Laki-laki</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">284</div>
+              <div class="stat-label">Perempuan</div>
+            </div>
+          </div>
+        
+          <!-- Detail Statistik Per Jaga -->
+          <div style="margin-top: 50px;">
+            <h3 style="color: white; text-align: center; margin-bottom: 30px; font-size: 1.5rem;">Detail Penduduk Per Jaga</h3>
+            <div class="stats-detail-grid">
+              <!-- Jaga I -->
+              <div class="jaga-accordion">
+                <div class="jaga-accordion-header jaga-header-container">
+                  <h4 style="cursor: pointer; margin: 0;">Jaga I</h4>
+                  <button class="detail-btn-header" onclick="showJagaPopup(1); event.stopPropagation();"><i class="fas fa-eye"></i> Lihat Detail</button>
+                </div>
+                <div class="jaga-accordion-body" id="body-1" style="display: none;">
+                </div>
+              </div>
+            
+              <!-- Jaga II -->
+              <div class="jaga-accordion">
+                <div class="jaga-accordion-header jaga-header-container">
+                  <h4 style="cursor: pointer; margin: 0;">Jaga II</h4>
+                  <button class="detail-btn-header" onclick="showJagaPopup(2); event.stopPropagation();"><i class="fas fa-eye"></i> Lihat Detail</button>
+                </div>
+                <div class="jaga-accordion-body" id="body-2" style="display: none;">
+                </div>
+              </div>
+            
+              <!-- Jaga III -->
+              <div class="jaga-accordion">
+                <div class="jaga-accordion-header jaga-header-container">
+                  <h4 style="cursor: pointer; margin: 0;">Jaga III</h4>
+                  <button class="detail-btn-header" onclick="showJagaPopup(3); event.stopPropagation();"><i class="fas fa-eye"></i> Lihat Detail</button>
+                </div>
+                <div class="jaga-accordion-body" id="body-3" style="display: none;">
+                </div>
+              </div>
+            
+              <!-- Jaga IV -->
+              <div class="jaga-accordion">
+                <div class="jaga-accordion-header jaga-header-container">
+                  <h4 style="cursor: pointer; margin: 0;">Jaga IV</h4>
+                  <button class="detail-btn-header" onclick="showJagaPopup(4); event.stopPropagation();"><i class="fas fa-eye"></i> Lihat Detail</button>
+                </div>
+                <div class="jaga-accordion-body" id="body-4" style="display: none;">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popup Detail Jaga -->
+      <div id="jagaPopup" class="jaga-popup">
+        <div class="jaga-popup-content">
+          <button class="jaga-popup-close" onclick="closeJagaPopup()">&times;</button>
+          <h2 id="popupTitle"></h2>
+          
+          <div class="popup-stats">
+            <div class="popup-stat-item">
+              <i class="fas fa-home"></i>
+              <div>
+                <span class="popup-stat-label">Kepala Keluarga</span>
+                <span class="popup-stat-number" id="popupKK"></span>
+              </div>
+            </div>
+            
+            <div class="popup-stat-item">
+              <i class="fas fa-male"></i>
+              <div>
+                <span class="popup-stat-label">Laki-laki</span>
+                <span class="popup-stat-number" id="popupLaki"></span>
+              </div>
+            </div>
+            
+            <div class="popup-stat-item">
+              <i class="fas fa-female"></i>
+              <div>
+                <span class="popup-stat-label">Perempuan</span>
+                <span class="popup-stat-number" id="popupPerempuan"></span>
+              </div>
+            </div>
+
+            <div class="popup-stat-item total">
+              <i class="fas fa-users"></i>
+              <div>
+                <span class="popup-stat-label">Jumlah Penduduk</span>
+                <span class="popup-stat-number" id="popupTotal"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lokasi Desa Section -->
+      <section id="lokasi-section" style="padding: 10px 10px; background: #f8f9fa;">
+        <div class="container">
+          <div class="section-title">
+            <h2>Lokasi Desa</h2>
+            <h3 style="margin-top: 30px">Kondisi dan Informasi Geografis</h3>
+            <p>
+              Berikut adalah kondisi dan informasi geografis Desa Minanga:
+            </p>
+          </div>
+
+
+          <div class="lokasi-grid">
+            <!-- Card 1: Koordinat -->
+            <div class="lokasi-card">
+              <div class="lokasi-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h3>Koordinat Geografis</h3>
+              <p class="lokasi-detail">
+                <strong>Latitude:</strong> 0° 58′ 39.21″ N<br />
+                <strong>Longitude:</strong> 124° 50′ 59.09″ E
+              </p>
+            </div>
+
+            <!-- Card 2: Luas Wilayah -->
+            <div class="lokasi-card">
+              <div class="lokasi-icon">
+                <i class="fas fa-square"></i>
+              </div>
+              <h3>Luas Wilayah</h3>
+              <p class="lokasi-detail">
+                <strong>Total:</strong> 68.8 Ha<br />
+                <strong>Persawahan:</strong> 34 Ha<br />
+                <strong>Perkebunan:</strong> 238 Ha
+              </p>
+            </div>
+
+            <!-- Card 3: Batas Wilayah -->
+            <div class="lokasi-card">
+              <div class="lokasi-icon">
+                <i class="fas fa-border-all"></i>
+              </div>
+              <h3>Batas Wilayah</h3>
+              <p class="lokasi-detail">
+                <strong>Utara:</strong> Desa Wioi<br />
+                <strong>Selatan:</strong> Desa Minanga Timur<br />
+                <strong>Barat:</strong> Desa Molompar Timur<br />
+                <strong>Timur:</strong> Sungai Abuang
+              </p>
+            </div>
+
+            <!-- Card 4: Jarak Akses -->
+            <div class="lokasi-card">
+              <div class="lokasi-icon">
+                <i class="fas fa-road"></i>
+              </div>
+              <h3>Jarak Akses</h3>
+              <p class="lokasi-detail">
+                <strong>Ke Ibukota Kecamatan:</strong> 3 km<br />
+                <strong>Ke Ibukota Kabupaten:</strong> 15 km<br />
+                <strong>Ke Ibukota Provinsi:</strong> 99 km
+              </p>
+            </div>
+          </div>
+
+      <!-- Map Section -->
+      <div class="map-section">
+        <h3>Peta Desa Minanga</h3>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.6789123456!2d124.84973915307857!3d0.9775690272126307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0!2zMCDCsDU4JzM5LjY0IksgMTI0wrA1MCc1OS41OCJF!5e0!3m2!1sid!2sid!4v1234567890"
+            width="100%"
+            height="400"
+            style="border: 0; border-radius: 10px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Profil Desa Page -->
+    <div id="profil" class="page-content">
+      <div class="container">
+        <div class="section-title">
+          <h2>Tentang Desa Minanga</h2>
+        </div>
+
+        <div class="card">
+          <h3>Sejarah Desa</h3>
+          <p>
+            Desa Minanga berasal dari kata ‘IMANGA’ yang berasal dari bahasa Pasan yang artinya ‘Terbuka’ yang selanjutnya disebut Minanga. 
+            Orang-orang Minanga mulanya tinggal di tempat yang namanya Gereja, 
+            yang datang dulunya disebut 'Pamangkea' yang turun menempati tanah dibagian selatan Desa Minanga 
+            dan diberi nama 'Sumampu' yang pada waktu itu di pimpin oleh seorang Hukum Tua bernama SAWEL, 
+            kemudian ada juga orang-orang yang datang dari tempat yang bernama Lisung yang saat ini 
+            dikenal dengan nama Negeri Lama yang dijumpai seorang Hukum Tua yang bernama ALBERD PONTORORING 
+            dengan keakrabannya orang Sumampu dan orang Lisung, maka mereka dapat melaksanakan kesepakatan untuk 
+            mencetuskan sebuah nama Desa Minanga. Nama Minanga berawal dengan ucapan seseorang 
+            Kepala Jaga Sumampu yaitu bernama ‘MUTOPA’ yang memberitahu bahwa muara sungai telah terbuka 
+            (IMANGA) yang diucapkan dari bahasa Pasan artinya Muara sungai telah terbuka yang saat itu 
+            bertepatan dengan banjir yang sangat besar terjadi waktu itu yang selanjutnya disempurnakan dengan nama Minanga. 
+            Dan bergabungnya orang-orang Sumampu dan orang-orang dari Lisung mereka berpendapat dan bersepakat untuk 
+            mengangkat seorang Hukum Tua maka diadakan musyawarah dan mufakat ditunjuk seorang yang bernama THEODORUS UMPUNG 
+            dari orang Sumampu yang waktu itu sedang dalam Pendididkan Sekolah Raja di Tondano.
+          </p>
+
+          <h3 style="margin-top: 30px">Sejarah Pemerintahan Desa</h3>
+          <p>
+            Desa Minanga memiliki sejarah pemerintahan yang panjang dengan kepemimpinan yang berkelanjutan. 
+            <br> 
+            Berikut adalah daftar Hukum Tua yang telah memimpin Desa Minanga:
+          </p>
+
+          <div style="margin-top: 25px;">
+            <div class="hukum-tua-grid">
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Theodarus Lengkong</h4>
+                </div>
+                <div class="hukum-tua-period">1859 - 1874</div>
+              </div>
+
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Albert Pontororing</h4>
+                </div>
+                <div class="hukum-tua-period">1874 - 1880</div>
+              </div>
+
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Theodorus Pontororing</h4>
+                </div>
+                <div class="hukum-tua-period">1881 - 1889</div>
+              </div>
+
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Wellem Ngongoloy</h4>
+                </div>
+                <div class="hukum-tua-period">1890 - 1905</div>
+              </div>
+
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Enos Pontororing</h4>
+                </div>
+                <div class="hukum-tua-period">1906 - 1936</div>
+              </div>
+
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Soleman Pontororing</h4>
+                </div>
+                <div class="hukum-tua-period">1937 - 1940</div>
+              </div>
+
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Samuel Rako</h4>
+                </div>
+                <div class="hukum-tua-period">1941 - 1942</div>
+              </div>
+
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Alexander Ratuliu</h4>
+                </div>
+                <div class="hukum-tua-period">1943 - 1949</div>
+              </div>
+
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Wilhelmus Pontororing</h4>
+                </div>
+                <div class="hukum-tua-period">1950 - 1953</div>
+              </div>
+
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Marten Punusingon</h4>
+                </div>
+                <div class="hukum-tua-period">1953</div>
+              </div>
+
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Laures Paat</h4>
+                </div>
+                <div class="hukum-tua-period">1954</div>
+              </div>
+
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Robert Wenur</h4>
+                </div>
+                <div class="hukum-tua-period">1954 - 1955</div>
+              </div>
+
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Garadus Punusingon</h4>
+                </div>
+                <div class="hukum-tua-period">1956 - 1959</div>
+              </div>
+
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Daud Punusingon</h4>
+                </div>
+                <div class="hukum-tua-period">1960 - 1961</div>
+              </div>
+
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Herman Wenur</h4>
+                </div>
+                <div class="hukum-tua-period">1962 - 1971</div>
+              </div>
+
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Heibert Lontaan</h4>
+                </div>
+                <div class="hukum-tua-period">1972 - 1978</div>
+              </div>
+
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Adolf Pontororing</h4>
+                </div>
+                <div class="hukum-tua-period">1979 - 1980</div>
+              </div>
+
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Heibert Lontaan</h4>
+                </div>
+                <div class="hukum-tua-period">1980 - 1986 (Periode II)</div>
+              </div>
+
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Maurits Punusingon</h4>
+                </div>
+                <div class="hukum-tua-period">1986 - 1994</div>
+              </div>
+
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Frans Rotulung</h4>
+                </div>
+                <div class="hukum-tua-period">1995</div>
+              </div>
+
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Zeth Pontororing</h4>
+                </div>
+                <div class="hukum-tua-period">1995 - 1997</div>
+              </div>
+
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Markus Mamengko</h4>
+                </div>
+                <div class="hukum-tua-period">1997 - 2006</div>
+              </div>
+
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Constantein A. Ratuliu, SE</h4>
+                </div>
+                <div class="hukum-tua-period">2006 - 2018</div>
+              </div>
+
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Alex Pontororing, SE</h4>
+                </div>
+                <div class="hukum-tua-period">2019 - 2020</div>
+              </div>
+
+              <div class="hukum-tua-card">
+                <div class="hukum-tua-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                  <h4>Constantein A. Ratuliu, SE</h4>
+                </div>
+                <div class="hukum-tua-period">2020 - Sekarang</div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- Struktur Organisasi Page -->
+    <div id="struktur" class="page-content">
+      <div class="container">
+        <div class="section-title">
+          <h2>Struktur Organisasi</h2>
+          <p>Pemerintahan Desa Minanga</p>
+        </div>
+
+        <div class="struktur-grid">
+          <!-- Baris 1: Hukum Tua -->
+          <div class="struktur-row">
+            <div class="perangkat-card">
+              <h4>CONSTANTEIN A. RATULIU, SE</h4>
+              <span class="jabatan-badge">Hukum Tua</span>
+            </div>
+          </div>
+
+          <!-- Baris 2: Sekretaris Desa -->
+          <div class="struktur-row">
+            <div class="perangkat-card">
+              <h4>RECKY M. MAMENGKO</h4>
+              <span class="jabatan-badge">Sekretaris Desa</span>
+            </div>
+          </div>
+
+          <!-- Baris 3: Urusan -->
+          <div class="struktur-row">
+            <div class="perangkat-card">
+              <h4>AGNES WAHONGAN</h4>
+              <span class="jabatan-badge">Urusan Umum</span>
+            </div>
+            <div class="perangkat-card">
+              <h4>MELYADI LONTAAN</h4>
+              <span class="jabatan-badge">Urusan Perencanaan</span>
+            </div>
+            <div class="perangkat-card">
+              <h4>RIFOL K. KOMANSILAN</h4>
+              <span class="jabatan-badge">Urusan Keuangan</span>
+            </div>
+          </div>
+
+          <!-- Baris 4: Seksi -->
+          <div class="struktur-row">
+            <div class="perangkat-card">
+              <h4>DONALD GIJOH</h4>
+              <span class="jabatan-badge">Seksi Pemerintahan</span>
+            </div>
+            <div class="perangkat-card">
+              <h4>OKTAVIANUS WALEAN</h4>
+              <span class="jabatan-badge">Seksi Kesejahteraan</span>
+            </div>
+            <div class="perangkat-card">
+              <h4>JACKSON PAI</h4>
+              <span class="jabatan-badge">Seksi Pelayanan</span>
+            </div>
+          </div>
+
+          <!-- Baris 5: Kepala Jaga -->
+          <div class="struktur-row">
+            <div class="perangkat-card">
+              <h4>ASWIN MAMENGKO</h4>
+              <span class="jabatan-badge">Kepala Jaga I</span>
+            </div>
+            <div class="perangkat-card">
+              <h4>FEYBE LOLORA</h4>
+              <span class="jabatan-badge">Kepala Jaga II</span>
+            </div>
+            <div class="perangkat-card">
+              <h4>MELKI SAWEL</h4>
+              <span class="jabatan-badge">Kepala Jaga III</span>
+            </div>
+            <div class="perangkat-card">
+              <h4>MELKY PANANGINAN</h4>
+              <span class="jabatan-badge">Kepala Jaga IV</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Potensi Desa Page -->
+    <div id="potensi" class="page-content">
+      <div class="container">
+        <div class="section-title">
+          <h2>Potensi Desa</h2>
+          <p>Kekayaan dan potensi unggulan desa</p>
+        </div>
+      
+        <div class="potensi-grid">
+          <!-- Penyulingan Nilam -->
+          <div class="potensi-card">
+            <div class="potensi-media">
+              <video autoplay loop muted playsinline poster="/path/to/nilam-thumbnail.jpg">
+                <source src="/vid/nilam.mp4" type="video/mp4">
+                Browser Anda tidak mendukung video.
+              </video>
+              <div class="potensi-overlay">
+                <div class="card-icon" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                  <i class="fas fa-tractor"></i>
+                </div>
+              </div>
+            </div>
+            <div class="potensi-content">
+              <h3>Penyulingan Nilam</h3>
+              <p class="potensi-desc">
+                Tempat pengolahan daun nilam kering menjadi minyak atsiri dengan metode destilasi (uap atau rebus).
+              </p>
+              <div class="potensi-details">
+                <div class="detail-item">
+                  <i class="fas fa-industry"></i>
+                  <span>Industri Pengolahan</span>
+                </div>
+                <div class="detail-item">
+                  <i class="fas fa-users"></i>
+                  <span>Pelaku Usaha Aktif</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Kopra -->
+          <div class="potensi-card">
+            <div class="potensi-media">
+              <video autoplay loop muted playsinline poster="/path/to/kopra-thumbnail.jpg">
+                <source src="/vid/kopra.mp4" type="video/mp4">
+                Browser Anda tidak mendukung video.
+              </video>
+              <div class="potensi-overlay">
+                <div class="card-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                  <i class="fas fa-store"></i>
+                </div>
+              </div>
+            </div>
+            <div class="potensi-content">
+              <h3>Kopra</h3>
+              <p class="potensi-desc">
+                Daging buah kelapa tua yang dikeringkan, menjadi bahan baku utama untuk memproduksi minyak kelapa dan turunannya.
+              </p>
+              <div class="potensi-details">
+                <div class="detail-item">
+                  <i class="fas fa-seedling"></i>
+                  <span>Pertanian</span>
+                </div>
+                <div class="detail-item">
+                  <i class="fas fa-chart-line"></i>
+                  <span>Komoditas Ekspor</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Batako -->
+          <div class="potensi-card">
+            <div class="potensi-media">
+              <video autoplay loop muted playsinline poster="/path/to/batako-thumbnail.jpg">
+                <source src="/vid/batako.mp4" type="video/mp4">
+                Browser Anda tidak mendukung video.
+              </video>
+              <div class="potensi-overlay">
+                <div class="card-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                  <i class="fas fa-mountain"></i>
+                </div>
+              </div>
+            </div>
+            <div class="potensi-content">
+              <h3>Batako</h3>
+              <p class="potensi-desc">
+                Bahan bangunan berbentuk bata cetak yang terbuat dari campuran semen, pasir, air, dan agregat (kadang), dan dicetak tanpa pembakaran.
+              </p>
+              <div class="potensi-details">
+                <div class="detail-item">
+                  <i class="fas fa-hard-hat"></i>
+                  <span>Material Bangunan</span>
+                </div>
+                <div class="detail-item">
+                  <i class="fas fa-tools"></i>
+                  <span>Produksi Lokal</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Penyulingan Cap Tikus -->
+          <div class="potensi-card">
+            <div class="potensi-media">
+              <video autoplay loop muted playsinline poster="/path/to/captikus-thumbnail.jpg">
+                <source src="/vid/cap.mp4" type="video/mp4">
+                Browser Anda tidak mendukung video.
+              </video>
+              <div class="potensi-overlay">
+                <div class="card-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                  <i class="fas fa-drum"></i>
+                </div>
+              </div>
+            </div>
+            <div class="potensi-content">
+              <h3>Penyulingan Cap Tikus</h3>
+              <p class="potensi-desc">
+                Proses tradisional mengubah nira (saguer) dari pohon aren menjadi minuman beralkohol kuat khas Minahasa melalui fermentasi dan distilasi.
+              </p>
+              <div class="potensi-details">
+                <div class="detail-item">
+                  <i class="fas fa-landmark"></i>
+                  <span>Warisan Budaya</span>
+                </div>
+                <div class="detail-item">
+                  <i class="fas fa-flask"></i>
+                  <span>Proses Tradisional</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Pengolahan Pasir -->
+          <div class="potensi-card">
+            <div class="potensi-media">
+              <video autoplay loop muted playsinline poster="/path/to/pasir-thumbnail.jpg">
+                <source src="/vid/pasir.mp4" type="video/mp4">
+                Browser Anda tidak mendukung video.
+              </video>
+              <div class="potensi-overlay">
+                <div class="card-icon" style="background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);">
+                  <i class="fas fa-layer-group"></i>
+                </div>
+              </div>
+            </div>
+            <div class="potensi-content">
+              <h3>Pengolahan Pasir</h3>
+              <p class="potensi-desc">
+                Proses mendapatkan material butiran alami (dari sungai, laut, atau galian) atau buatan untuk digunakan sebagai bahan bangunan utama.
+              </p>
+              <div class="potensi-details">
+                <div class="detail-item">
+                  <i class="fas fa-truck"></i>
+                  <span>Material Konstruksi</span>
+                </div>
+                <div class="detail-item">
+                  <i class="fas fa-mountain"></i>
+                  <span>Sumber Daya Alam</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Pengolahan Kayu -->
+          <div class="potensi-card">
+            <div class="potensi-media">
+              <video autoplay loop muted playsinline poster="/path/to/kayu-thumbnail.jpg">
+                <source src="/vid/kayu.mp4" type="video/mp4">
+                Browser Anda tidak mendukung video.
+              </video>
+              <div class="potensi-overlay">
+                <div class="card-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                  <i class="fas fa-tree"></i>
+                </div>
+              </div>
+            </div>
+            <div class="potensi-content">
+              <h3>Pengolahan Kayu</h3>
+              <p class="potensi-desc">
+                Proses mengubah kayu gelondongan dari hutan menjadi berbagai produk kayu siap pakai.
+              </p>
+              <div class="potensi-details">
+                <div class="detail-item">
+                  <i class="fas fa-industry"></i>
+                  <span>Industri Kehutanan</span>
+                </div>
+                <div class="detail-item">
+                  <i class="fas fa-recycle"></i>
+                  <span>Berkelanjutan</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Detail Potensi -->
+    <div id="potensiModal" class="modal">
+      <div class="modal-content modal-large">
+        <span class="close" onclick="closePotensiModal()">&times;</span>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+
+    <!-- APBDes Page -->
+    <div id="apbdes" class="page-content">
+      <div class="container">
+        <div class="section-title">
+          <h2>APBDes Tahun 2025</h2>
+          <p>Anggaran Pendapatan dan Belanja Desa Minanga</p>
+        </div>
+      
+        <div class="apbdes-header">
+          <div class="apbdes-banner">
+            <div class="banner-title">
+              <h3>DESA MINANGA</h3>
+              <p>KECAMATAN PUSOMAEN, KABUPATEN MINAHASA TENGGARA</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="apbdes-container">
+          <table class="apbdes-table">
+            <thead>
+              <tr>
+                <th class="col-uraian">URAIAN</th>
+                <th class="col-anggaran">ANGGARAN (RP)</th>
+                <th class="col-sumber">SUMBER DANA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- PENDAPATAN -->
+              <tr class="section-header">
+                <td colspan="3">PENDAPATAN</td>
+              </tr>
+              <tr class="main-item">
+              </tr>
+              <tr>
+                <td class="sub-item">Pendapatan Asli Desa</td>
+                <td class="amount">18.000.000,00</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="sub-item">Pendapatan Transfer</td>
+                <td class="amount">1.078.924.276,00</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="sub-item">Pendapatan Lain-lain</td>
+                <td class="amount">5.000.000,00</td>
+                <td></td>
+              </tr>
+              <tr class="subtotal">
+                <td>JUMLAH PENDAPATAN</td>
+                <td class="amount">1.101.924.276,00</td>
+                <td></td>
+              </tr>
+            
+              <!-- BELANJA -->
+              <tr class="section-header">
+                <td colspan="3">BELANJA</td>
+              </tr>
+            
+              <!-- Bidang Penyelenggaraan Pemerintah Desa -->
+              <tr class="category-header">
+                <td>BIDANG PENYELENGGARAAN PEMERINTAH DESA</td>
+                <td class="amount">448.067.276,00</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="sub-item">Penyelenggaraan Belanja Siltap, Tunjangan dan Operasional Pemerintah Desa</td>
+                <td class="amount">437.067.276,00</td>
+                <td class="source">ADD/DDS/PBH/DLL</td>
+              </tr>
+              <tr>
+                <td class="sub-item">Pengelolaan Administrasi Kependudukan, Pencatatan Sipil, Statistik dan Kearsipan</td>
+                <td class="amount">5.000.000,00</td>
+                <td class="source">DDS</td>
+              </tr>
+              <tr>
+                <td class="sub-item">Perencanaan Tata Praja Pemerintahan, Perencanaan, Keuangan dan Pelaporan</td>
+                <td class="amount">6.000.000,00</td>
+                <td class="source">DDS</td>
+              </tr>
+            
+              <!-- Bidang Pelaksanaan Pembangunan Desa -->
+              <tr class="category-header">
+                <td>BIDANG PELAKSANAAN PEMBANGUNAN DESA</td>
+                <td class="amount">362.485.600,00</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="sub-item">Sub Bidang Pendidikan</td>
+                <td class="amount">6.000.000,00</td>
+                <td class="source">DDS</td>
+              </tr>
+              <tr>
+                <td class="sub-item">Sub Bidang Kesehatan</td>
+                <td class="amount">66.000.000,00</td>
+                <td class="source">DDS</td>
+              </tr>
+              <tr>
+                <td class="sub-item">Sub Bidang Pekerjaan Umum dan Penataan Ruang</td>
+                <td class="amount">151.885.600,00</td>
+                <td class="source">DDS</td>
+              </tr>
+              <tr>
+                <td class="sub-item">Sub Bidang Pemukiman</td>
+                <td class="amount">30.000.000,00</td>
+                <td class="source">DDS</td>
+              </tr>
+              <tr>
+                <td class="sub-item">Sub Bidang Perhubungan, Komunikasi dan Informasi</td>
+                <td class="amount">78.600.000,00</td>
+                <td class="source">DDS</td>
+              </tr>
+              <tr>
+                <td class="sub-item">Sub Bidang Energi dan Sumberdaya Mineral</td>
+                <td class="amount">30.000.000,00</td>
+                <td class="source">DDS/PAD</td>
+              </tr>
+            
+              <!-- Bidang Pemberdayaan Masyarakat -->
+              <tr class="category-header">
+                <td>BIDANG PEMBERDAYAAN MASYARAKAT</td>
+                <td class="amount">35.000.000,00</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="sub-item">Sub Bidang Pertanian dan Peternakan</td>
+                <td class="amount">20.000.000,00</td>
+                <td class="source">DDS</td>
+              </tr>
+              <tr>
+                <td class="sub-item">Sub Bidang Peningkatan Kapasitas Aparatur Desa</td>
+                <td class="amount">15.000.000,00</td>
+                <td class="source">DDS</td>
+              </tr>
+            
+              <!-- Bidang Penanggulangan Bencana -->
+              <tr class="category-header">
+                <td>BIDANG PENANGGULANGAN BENCANA, DARURAT DAN KEADAAN MENDESAK</td>
+                <td class="amount">123.000.000,00</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="sub-item">Penanggulangan Bencana</td>
+                <td class="amount">15.000.000,00</td>
+                <td class="source">DDS</td>
+              </tr>
+              <tr>
+                <td class="sub-item">Bantuan Lansung Tunai (BLT-DD)</td>
+                <td class="amount">108.000.000,00</td>
+                <td class="source">DDS</td>
+              </tr>
+            
+              <!-- Total Belanja -->
+              <tr class="total">
+                <td>JUMLAH BELANJA</td>
+                <td class="amount">968.552.876,00</td>
+                <td></td>
+              </tr>
+            
+              <!-- Surplus/Defisit -->
+              <tr class="surplus">
+                <td>SURPLUS/(DEFISIT)</td>
+                <td class="amount">133.371.400,00</td>
+                <td></td>
+              </tr>
+            
+              <!-- Pembiayaan -->
+              <tr class="section-header pembiayaan">
+                <td colspan="3">PEMBIAYAAN</td>
+              </tr>
+              <tr>
+                <td class="sub-item">Pengeluaran Pembiayaan</td>
+                <td class="amount">133.371.400,00</td>
+                <td></td>
+              </tr>
+              <tr class="netto">
+                <td>PEMBIAYAAN NETTO</td>
+                <td class="amount">(133.371.400,00)</td>
+                <td></td>
+              </tr>
+              <tr class="sisa">
+                <td>SISA LEBIH PEMBIAYAAN ANGGARAN</td>
+                <td class="amount">0,00</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      
+        <div class="apbdes-info">
+          <div class="info-card">
+            <i class="fas fa-info-circle"></i>
+            <div>
+              <h4>Catatan</h4>
+              <p>APBDes ini telah disahkan sesuai dengan Peraturan Desa dan berlaku untuk tahun anggaran 2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kontak Page -->
+    <div id="kontak" class="page-content">
+      <div class="container">
+        <div class="section-title">
+          <h2>Hubungi Kami</h2>
+          <p>Butuh informasi atau bantuan?</p>
+        </div>
+
+        <div class="grid-cards">
+          <div class="card">
+            <div
+              class="card-icon"
+              style="
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              "
+            >
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Alamat</h3>
+            <p>
+              Desa Minanga<br />
+              Kec. Pusomaen, Kab. Minahasa Tenggara<br />
+              Provinsi Sulawesi Utara <br />
+              Kode Pos 95997
+            </p>
+          </div>
+
+          <div class="card">
+            <div
+              class="card-icon"
+              style="
+                background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+              "
+            >
+              <i class="fas fa-phone"></i>
+            </div>
+            <h3>Telepon</h3>
+            <p>
+              +62 xxx xxxx xxxx<br /><br />
+              Senin - Jumat<br />
+              08.00 - 16.00 WIB
+            </p>
+          </div>
+
+          <div class="card">
+            <div
+              class="card-icon"
+              style="
+                background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+              "
+            >
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email</h3>
+            <p>
+              -@email.com<br /><br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Desa Minanga</h3>
+          <p>Website resmi Desa Minanga sebagai sarana informasi.</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Menu</h3>
+          <ul>
+            <li><a href="#" onclick="showPage('beranda')">Beranda</a></li>
+            <li><a href="#" onclick="showPage('profil')">Profil Desa</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Informasi</h3>
+          <ul>
+            <li>
+              <a href="#" onclick="showPage('struktur')">Struktur Organisasi</a>
+            </li>
+            <li><a href="#" onclick="showPage('potensi')">Potensi Desa</a></li>
+            <li><a href="#" onclick="showPage('apbdes')">APBDes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Kontak</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Desa Minanga<br />
+              Kec. Pusomaen, Kab. Minahasa Tenggara,<br />
+              Provinsi Sulawesi Utara <br />
+              Kode Pos 95997
+          </p>
+          <p><i class="fas fa-phone"></i> +62 xxx xxxx xxxx</p>
+          <p><i class="fas fa-envelope"></i> -@email.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Desa Minanga. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Toggle Accordion Jaga
+      function toggleJagaAccordion(jagaNumber) {
+        const body = document.getElementById(`body-${jagaNumber}`);
+        const icon = document.getElementById(`icon-${jagaNumber}`);
+        
+        if (body.style.display === "none") {
+          body.style.display = "block";
+          icon.style.transform = "rotate(180deg)";
+        } else {
+          body.style.display = "none";
+          icon.style.transform = "rotate(0deg)";
+        }
+      }
+
+      // Data detail penduduk per jaga
+      const jagaStats = {
+        1: { name: "Jaga I", kk: 52, laki: 80, perempuan: 71 },
+        2: { name: "Jaga II", kk: 53, laki: 78, perempuan: 58 },
+        3: { name: "Jaga III", kk: 73, laki: 107, perempuan: 93 },
+        4: { name: "Jaga IV", kk: 46, laki: 74, perempuan: 62 }
+      };
+
+      function showJagaPopup(jagaNumber) {
+        const data = jagaStats[jagaNumber];
+        const total = data.laki + data.perempuan;
+        
+        document.getElementById("popupTitle").textContent = "Statistik " + data.name;
+        document.getElementById("popupKK").textContent = data.kk + " KK";
+        document.getElementById("popupLaki").textContent = data.laki + " Orang";
+        document.getElementById("popupPerempuan").textContent = data.perempuan + " Orang";
+        document.getElementById("popupTotal").textContent = total + " Orang";
+        
+        document.getElementById("jagaPopup").style.display = "flex";
+      }
+
+      function closeJagaPopup() {
+        document.getElementById("jagaPopup").style.display = "none";
+      }
+
+      window.onclick = function(event) {
+        const popup = document.getElementById("jagaPopup");
+        if (event.target == popup) {
+          popup.style.display = "none";
+        }
+      }
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
